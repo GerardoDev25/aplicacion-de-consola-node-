@@ -5,8 +5,16 @@ const { showMenu, pausa } = require("./helpers/messages");
 console.clear();
 
 const main = async (e) => {
-   showMenu();
-// pausa();
+   let opt = "";
+
+   do {
+
+      opt = await showMenu();
+      console.log({ opt });
+      await pausa();
+      
+   } while (opt !== "0");
+
 };
 
 main();
