@@ -61,4 +61,22 @@ const pause = async () => {
    ]);
 };
 
-module.exports = { inquirerMunu, pause };
+const leerInput = async (message) => {
+   const question = [
+      {
+         type: "input",
+         name: "desc",
+         message,
+         validate(value) {
+            if (!value.length)
+               return "pro favor ingrese un valor";
+            return true;
+         },
+      },
+   ];
+
+   const {desc} = await inquirer.prompt(question);
+   return desc;
+};
+
+module.exports = { inquirerMunu, pause, leerInput };
