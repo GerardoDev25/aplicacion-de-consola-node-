@@ -1,6 +1,6 @@
 require("colors");
 
-const { showMenu, pausa } = require("./helpers/messages");
+const { inquirerMunu } = require("./helpers/inquirer");
 
 console.clear();
 
@@ -8,13 +8,10 @@ const main = async (e) => {
    let opt = "";
 
    do {
-
-      opt = await showMenu();
+      opt = await inquirerMunu();
       console.log({ opt });
-      await pausa();
-      
+    //   await pausa();
    } while (opt !== "0");
-
 };
 
 main();
