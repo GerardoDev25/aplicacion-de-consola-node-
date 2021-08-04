@@ -61,7 +61,7 @@ const pause = async () => {
    ]);
 };
 
-// ? funcion que se encarga de leer la obcion 
+// ? funcion que se encarga de leer la obcion
 const leerInput = async (message) => {
    const question = [
       {
@@ -76,8 +76,38 @@ const leerInput = async (message) => {
       },
    ];
 
-   const {desc} = await inquirer.prompt(question);
+   const { desc } = await inquirer.prompt(question);
    return desc;
 };
 
-module.exports = { inquirerMunu, pause, leerInput };
+// ? funcion para listar las tarea para borrar
+const listadoTareasBorrar = async (tareas = []) => {
+   const choices = tareas.map((tarea, index) => {
+      const idx = `${index + 1}.`.green;
+
+      return {
+         value: tarea.id,
+         name: `${idx} ${tarea.desc}`,
+      };
+   });
+
+   const preguntas = [
+      {
+         type: "list",
+         name: "id",
+         message: "Borrar",
+         choices,
+      },
+   ];
+
+   const { id } = await inquirer.prompt(preguntas);
+
+   return id;
+};
+
+module.exports = {
+   inquirerMunu,
+   pause,
+   leerInput,
+   listadoTareasBorrar,
+};

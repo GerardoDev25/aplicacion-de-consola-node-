@@ -18,6 +18,11 @@ class Tareas {
       this._listado = {};
    }
 
+   // ? funcion para eleminar una tarea
+   borrarTarea(id = "") {
+      this._listado[id] && delete this._listado[id];
+   }
+
    // ? funcion para cargar las tareas
    cargarTareasDesdeArray(tareas = []) {
       tareas.forEach((tarea) => {
