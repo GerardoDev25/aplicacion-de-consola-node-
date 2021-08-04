@@ -6,22 +6,18 @@ const {
    pause,
    leerInput,
 } = require("./helpers/inquirer");
-
 const Tareas = require("./models/tareas");
 
-const main = async (e) => {
+const main = async () => {
    let opt = "";
-
    const tareas = new Tareas();
-
    const tareasDB = leerDB();
 
+   // * si exiten tareas cargarlas
    if (tareasDB) {
-      
+      tareas.cargarTareasDesdeArray(tareasDB);
    }
 
-   await pause()
-   
    do {
       console.clear();
 
@@ -37,7 +33,7 @@ const main = async (e) => {
 
          case "2":
             // * listar tareas
-            // console.log(tareas._listado);
+            console.log(tareas._listado);
             // console.log(tareas.listadoArr);
             break;
 
