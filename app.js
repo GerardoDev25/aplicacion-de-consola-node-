@@ -33,8 +33,10 @@ const main = async () => {
 
          case "2":
             // * listar tareas
-            console.log(tareas._listado);
+            // console.log(tareas._listado);
+
             // console.log(tareas.listadoArr);
+            tareas.listadoCompleto()
             break;
 
          case "3":
@@ -51,7 +53,7 @@ const main = async () => {
       }
 
       // * guardar las tareas en un archivos
-      // guardarDB(tareas.listadoArr)
+      guardarDB(tareas.listadoArr)
 
       await pause();
    } while (opt !== "0");

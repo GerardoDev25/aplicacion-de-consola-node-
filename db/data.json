@@ -1,7 +1,1 @@
-[
-   {
-      "id": "08cbed01-bd5f-44a1-85af-09c656235880",
-      "desc": "recolectar las piedras del infinito",
-      "completadoEn": null
-   }
-]
+[{"id":"08cbed01-bd5f-44a1-85af-09c656235880","desc":"recolectar las piedras del infinito","completadoEn":null},{"id":"4ccf3fd0-da9b-49ce-a6fd-b179e3d9471e","desc":"priedra del alma","completadoEn":"123343242"},{"id":"6bf8173e-5118-4146-ae4d-37b92a910a51","desc":"piedra del tiempo","completadoEn":null},{"id":"b69404b1-4e81-4b88-a512-e3371a5d8426","desc":"piedra de la realidad","completadoEn":null},{"id":"ea2ef0da-d241-45ba-8f79-ca2244e08aa8","desc":"piedra de la fuerza","completadoEn":null}]
