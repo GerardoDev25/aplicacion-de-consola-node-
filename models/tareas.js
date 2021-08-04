@@ -36,9 +36,9 @@ class Tareas {
       this.listadoArr.forEach(
          ({ desc, completadoEn }, index) => {
             console.log(
-               `${colors.blue(
-                  index + 1
-               )}. ${colors.green(desc)} ${"=>".blue} ${
+               `${colors.blue(index + 1)}. ${colors.green(
+                  desc
+               )} ${"=>".blue} ${
                   completadoEn
                      ? "Completado".green
                      : "Pendiente".red
@@ -46,6 +46,39 @@ class Tareas {
             );
          }
       );
+   }
+
+   // ? funcion para listar tareas compleatas y pendientes
+   listadoCompletoPendientes(compleatadas) {
+      compleatadas
+         ? this.listadoArr.forEach(
+              ({ desc, completadoEn }, index) => {
+                 completadoEn &&
+                    console.log(
+                       `${colors.blue(
+                          index + 1
+                       )}. ${colors.green(desc)} ${"=>".blue} ${
+                          completadoEn
+                             ? "Completado".green
+                             : "Pendiente".red
+                       }`
+                    );
+              }
+           )
+         : this.listadoArr.forEach(
+              ({ desc, completadoEn }, index) => {
+                 !completadoEn &&
+                    console.log(
+                       `${colors.blue(
+                          index + 1
+                       )}. ${colors.green(desc)} ${"=>".blue} ${
+                          completadoEn
+                             ? "Completado".green
+                             : "Pendiente".red
+                       }`
+                    );
+              }
+           );
    }
 }
 
