@@ -82,6 +82,7 @@ class Tareas {
            );
    }
 
+   // ? funcion para marcar las tareas como completadas
    toggleCompletadas(ids = []) {
       ids.forEach((id) => {
          const tarea = this._listado[id];
