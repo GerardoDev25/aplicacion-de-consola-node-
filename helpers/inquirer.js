@@ -80,7 +80,7 @@ const leerInput = async (message) => {
    return desc;
 };
 
-// ? funcion para listar las tarea para borrar
+// ? funcion de listar las tarea para borrar
 const listadoTareasBorrar = async (tareas = []) => {
    const choices = tareas.map((tarea, index) => {
       const idx = `${index + 1}.`.green;
