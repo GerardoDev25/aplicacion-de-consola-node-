@@ -1,6 +1,6 @@
 require("colors");
 
-const { guardarDB } = require("./db/guardarArchivo");
+const { guardarDB, leerDB } = require("./db/guardarArchivo");
 const {
    inquirerMunu,
    pause,
@@ -9,12 +9,19 @@ const {
 
 const Tareas = require("./models/tareas");
 
-
 const main = async (e) => {
    let opt = "";
 
    const tareas = new Tareas();
 
+   const tareasDB = leerDB();
+
+   if (tareasDB) {
+      
+   }
+
+   await pause()
+   
    do {
       console.clear();
 
@@ -31,7 +38,7 @@ const main = async (e) => {
          case "2":
             // * listar tareas
             // console.log(tareas._listado);
-            console.log(tareas.listadoArr);
+            // console.log(tareas.listadoArr);
             break;
 
          case "3":
