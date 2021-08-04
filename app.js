@@ -1,5 +1,6 @@
 require("colors");
 
+const { guardarDB } = require("./db/guardarArchivo");
 const {
    inquirerMunu,
    pause,
@@ -45,6 +46,9 @@ const main = async (e) => {
          case "6":
             break;
       }
+
+      // * guardar las tareas en un archivos
+      // guardarDB(tareas.listadoArr)
 
       await pause();
    } while (opt !== "0");
