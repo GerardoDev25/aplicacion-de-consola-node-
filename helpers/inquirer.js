@@ -42,7 +42,7 @@ const preguntas = [
 const inquirerMunu = async () => {
    //    console.clear();
    console.log("=============================".green);
-   console.log("*** seleccione una opcion ***".green);
+   console.log("*** seleccione una opcion ***".white);
    console.log("=============================\n".green);
 
    const { option } = await inquirer.prompt(preguntas);
@@ -61,6 +61,7 @@ const pause = async () => {
    ]);
 };
 
+// ? funcion que se encarga de leer la obcion 
 const leerInput = async (message) => {
    const question = [
       {
