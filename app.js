@@ -36,13 +36,17 @@ const main = async () => {
             // console.log(tareas._listado);
 
             // console.log(tareas.listadoArr);
-            tareas.listadoCompleto()
+            tareas.listadoCompleto();
             break;
 
          case "3":
+            // * listar  tareas completadas
+            tareas.listadoCompletoPendientes(true);
             break;
 
          case "4":
+            // * listar tareas pendientes
+            tareas.listadoCompletoPendientes(false);
             break;
 
          case "5":
@@ -53,7 +57,7 @@ const main = async () => {
       }
 
       // * guardar las tareas en un archivos
-      guardarDB(tareas.listadoArr)
+      guardarDB(tareas.listadoArr);
 
       await pause();
    } while (opt !== "0");

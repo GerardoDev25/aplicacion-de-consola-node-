@@ -38,7 +38,7 @@ class Tareas {
             console.log(
                `${colors.blue(index + 1)}. ${colors.green(
                   desc
-               )} ${"=>".blue} ${
+               )} ${" => ".blue} ${
                   completadoEn
                      ? "Completado".green
                      : "Pendiente".red
@@ -57,11 +57,9 @@ class Tareas {
                     console.log(
                        `${colors.blue(
                           index + 1
-                       )}. ${colors.green(desc)} ${"=>".blue} ${
-                          completadoEn
-                             ? "Completado".green
-                             : "Pendiente".red
-                       }`
+                       )}. ${colors.green(desc)} ${
+                          " => ".blue
+                       } ${colors.green(completadoEn)}`
                     );
               }
            )
@@ -71,11 +69,9 @@ class Tareas {
                     console.log(
                        `${colors.blue(
                           index + 1
-                       )}. ${colors.green(desc)} ${"=>".blue} ${
-                          completadoEn
-                             ? "Completado".green
-                             : "Pendiente".red
-                       }`
+                       )}. ${colors.green(desc)} ${
+                          " => ".blue
+                       } ${"Pendiente".red}`
                     );
               }
            );
