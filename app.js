@@ -52,7 +52,10 @@ const main = async () => {
          case "5":
             // * marcar tareas como completadoas 
             const ids = await MostrarTareasCheckList(tareas.listadoArr)
-            console.log(ids);
+
+            tareas.toggleCompletadas(ids)
+            
+            // console.log(ids);
             break;
 
          case "6":
